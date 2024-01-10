@@ -91,7 +91,26 @@ export function AuthPage() {
             goHome();
           }}
         />
+        {/* 新增加的超链接 */}
+        <a onClick={toggleLoginModal} className={styles["login-link"]}>用户登录</a>
       </div>
+
+      {/* 登录模态 */}
+      {showLoginModal && (
+        <div className={styles["login-modal"]}>
+          {/* 模态内容 */}
+          <div className={styles["modal-content"]}>
+            {/* 模态关闭按钮 */}
+            <button onClick={toggleLoginModal}>关闭</button>
+            {/* 登录表单 */}
+            <form>
+              <input type="text" placeholder="用户名" />
+              <input type="password" placeholder="密码" />
+              <button type="submit">登录</button>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
