@@ -32,5 +32,17 @@
     button:not(:last-child) {
       margin-bottom: 10px;
     }
+        // 新添加的超链接样式
+    .login-link {
+      color: #fff; // 可以调整为您希望的颜色
+      text-decoration: none;
+      padding: 10px 0;
+      font-size: 14px; // 可以调整为您希望的大小
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
